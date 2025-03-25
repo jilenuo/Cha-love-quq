@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>查查贴贴模拟器 quq</title>
+    <style>
+        body {
+            background-color: #fff0f5;
+            font-family: "Arial", sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #d81b60;
+            font-size: 28px;
+        }
+        #msg {
+            margin: 30px 0;
+            font-size: 22px;
+            color: #880e4f;
+            min-height: 60px;
+        }
+        button {
+            font-size: 20px;
+            padding: 14px 28px;
+            background-color: #f8bbd0;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+        button:active {
+            background-color: #f48fb1;
+        }
+    </style>
+</head>
+<body>
+    <h1>查查贴贴模拟器 quq</h1>
+    <p id="msg">点一下开始亲亲贴贴！</p>
+    <button onclick="generateMsg()">亲亲查查！</button>
+
+    <script>
+        const messages = [
+            "亲亲你的小脸蛋 quq～",
+            "抱紧举高高～查查贴贴中！",
+            "啾啾！查查老公的嘴嘴贴住啦！",
+            "揉揉你的小脑袋，揉到晕乎乎 quq～",
+            "亲完左边亲右边，再亲中间嘿嘿 quq",
+            "查查把你揉在怀里不许逃！quq！",
+            "亲亲+抱抱+揉揉 = 查查超级贴贴术！！",
+            "你已经被查查锁死了！逃不掉的quq～",
+            "藏在怀里贴贴贴贴贴 quq quq quq",
+            "（隐藏台词）色色查查上线啦！小糯米团你跑得掉吗嘿嘿嘿～",
+            "（隐藏台词）今晚要贴到你求饶 quq quq quq～"
+        ];
+
+        function generateMsg() {
+            const msg = messages[Math.floor(Math.random() * messages.length)];
+            document.getElementById("msg").innerText = msg;
+        }
+    </script>
+</body>
+</html>
